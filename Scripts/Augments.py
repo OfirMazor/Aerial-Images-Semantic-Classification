@@ -1,7 +1,7 @@
 import albumentations as A
 from torchvision import transforms as T
 import cv2
-import Configs
+from Configs import Configs
 
 
 
