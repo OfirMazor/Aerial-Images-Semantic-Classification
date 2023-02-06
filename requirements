@@ -3,7 +3,7 @@
 tqdm
 pandas
 Pillow
-cv2
+opencv
 albumentations
 matplotlib
 torch
