@@ -33,7 +33,7 @@ def create_df(path:str):
 
 
 
-def plot_random_image(images_df:pd.DataFrame):
+def plot_random_image(images_df:pd.DataFrame, masks_df:pd.DataFrame):
     
     id_list = sorted(images_df['id_int'].values.tolist())
     random_id = random.choice(id_list)
