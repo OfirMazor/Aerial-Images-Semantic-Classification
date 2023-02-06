@@ -2,7 +2,7 @@
 
 tqdm
 pandas
-PIL
+Pillow
 cv2
 albumentations
 matplotlib
