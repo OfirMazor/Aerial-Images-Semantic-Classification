@@ -9,16 +9,16 @@ class Configs:
     '''Set values for parameters & variables'''
     
     ### General ###
-    main_folder      = r'../input/semantic-drone-dataset/'
+    main_folder      = r'/content/Aerial-Images-Semantic-Classification/Data/'
     num_classes      = pd.read_csv(main_folder + 'class_dict_seg.csv')['name'].nunique() - 1 #subtruct the "unknown" label
-    images_path      = main_folder + 'dataset/semantic_drone_dataset/original_images/'
-    masks_path       = main_folder + 'dataset/semantic_drone_dataset/label_images_semantic/'
+    images_path      = main_folder + 'RGB Images/'
+    masks_path       = main_folder + 'Label Images/'
     images_count     = len(os.listdir(images_path))
     masks_count      = len(os.listdir(masks_path))
     num_bands        = 3 #RGB images
     device           = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed             = 100
-    prediction_folder= r'../working/'  
+    prediction_folder= r'../PredictedMasks/'  
     
     ### Data manegement ###
     test_size        = 0.1
@@ -34,7 +34,7 @@ class Configs:
     normalize_std    = (0.229, 0.224, 0.225)
     
     ### Model ###
-    model_folder     = r'../working/'
+    model_folder     = r'../ModelFolder/'
     encoder_name     = 'mobilenet_v2'
     encoder_weights  = 'imagenet'
     decoder_channels = [256, 128, 64, 32, 16]
