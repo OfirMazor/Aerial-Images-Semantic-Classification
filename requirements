@@ -1,0 +1,11 @@
+# Python requirements
+
+tqdm
+pandas
+PIL
+cv2
+albumentations
+matplotlib
+torch
+torchvision
+segmentation_models_pytorch as smp
