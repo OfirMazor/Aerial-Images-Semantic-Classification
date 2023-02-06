@@ -25,6 +25,7 @@ def create_df(path:str):
     
     df = pd.DataFrame({'id_str': name}, index = np.arange(0, len(name)))
     df['id_int'] = df['id_str'].astype(int)
+    df.sort_values('id_int', inplace = True)
     
     return df
 
