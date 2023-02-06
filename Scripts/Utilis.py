@@ -23,9 +23,7 @@ def create_df(path:str):
             if file.endswith('.jpg') or file.endswith('.png'):
                 name.append(file.split('.')[0])
     
-    df = pd.DataFrame({'id_str': name},
-                      index = np.arange(0, len(name)))
-    
+    df = pd.DataFrame({'id_str': name}, index = np.arange(0, len(name)))
     df['id_int'] = df['id_str'].astype(int)
     
     return df
@@ -118,19 +116,19 @@ def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataF
     
     # Generate random number of image file name
     random_number = np.random.randint(1, Dataset.__len__())
-     print(f'Showing observation number: {random_number}')
+    print(f'Showing observation number: {random_number}')
+    
+    # Get the random image and mask from torch Dataset
+    random_image = Dataset[random_number][0]               ;        random_mask = Dataset[random_number][1] ;
+    random_image = random_image.to('cpu').permute(1,2,0)   ;        random_mask = random_mask.to('cpu')     ;
 
-     # Get the random image and mask from torch Dataset
-     random_image = Dataset[random_number][0]               ;        random_mask = Dataset[random_number][1] ;
-     random_image = random_image.to('cpu').permute(1,2,0)   ;        random_mask = random_mask.to('cpu')     ;
+    # Get the prediction mask metrics values
+    if metrics_df is not None:
+        meanIoU = metrics_df[metrics_df['Image'] == random_number]['Mean IoU'].values
+        accuracy = metrics_df[metrics_df['Image'] == random_number]['Pixel Accuracy'].values
 
-     # Get the prediction mask metrics values
-     if metrics_df is not None:
-         meanIoU = metrics_df[metrics_df['Image'] == random_number]['Mean IoU'].values
-          ccuracy = metrics_df[metrics_df['Image'] == random_number]['Pixel Accuracy'].values
-
-      else:
-         pass
+     else:
+        pass
 
         # Get the prediction mask 
      pred_mask = Image.open(f'{prediction_folder}{random_number}.png')
