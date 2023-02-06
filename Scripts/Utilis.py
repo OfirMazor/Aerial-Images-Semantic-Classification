@@ -131,40 +131,23 @@ def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataF
         pass
 
         # Get the prediction mask 
-     pred_mask = Image.open(f'{prediction_folder}{random_number}.png')
+    pred_mask = Image.open(f'{prediction_folder}{random_number}.png')
 
       # Figure settings
-     plt.figure()
-     fig, axarr = plt.subplots(nrows=1, ncols=3, sharey=True, figsize=(25, 25))
+    plt.figure()
+    fig, axarr = plt.subplots(nrows=1, ncols=3, sharey=True, figsize=(25, 25))
 
-     axarr[0].imshow(random_image)
-     axarr[0].set_title(f'Original image {np.asarray(random_image).shape}')
+    axarr[0].imshow(random_image)
+    axarr[0].set_title(f'Original image {np.asarray(random_image).shape}')
 
-     axarr[1].imshow(random_mask)
-     axarr[1].set_title(f'Masked image {np.asarray(random_mask).shape}')
+    axarr[1].imshow(random_mask)
+    axarr[1].set_title(f'Masked image {np.asarray(random_mask).shape}')
 
-     axarr[2].imshow(pred_mask)
-     if metrics_df is not None:
+    axarr[2].imshow(pred_mask)
+    if metrics_df is not None:
         axarr[2].set_title(f'Predicted mask image {np.asarray(random_mask).shape} \n with pixel accuracy:{Accuracy} & mean IoU: {meanIoU}')
-     else:
-          axarr[2].set_title(f'Predicted mask image {np.asarray(random_mask).shape}')
+    else:
+        axarr[2].set_title(f'Predicted mask image {np.asarray(random_mask).shape}')
 
 
-     plt.show();
-
-
-
-  
-
-        
-
-
-
-
-
-
-
-
-
-
-
+    plt.show();
