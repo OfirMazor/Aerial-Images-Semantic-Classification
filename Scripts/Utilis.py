@@ -103,31 +103,31 @@ def get_lr(optimizer):
 
 
 def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataFrame = None):
-  '''
-  Plot a random image, it's label mask and it's prediction mask.
-  
-  Parameters:
-  -----------
-    - Dataset           : torch.Dataset class object (test set)
-    - prediction_folder : Folder path that contains the prediction masks files.
-    - metrics_df        : DataFrame with the metrics informations of masks (optional). default is None.
-  
-  '''
+    random_number = np.random.randint(1, Dataset.__len__())
+    '''
+    Plot a random image, it's label mask and it's prediction mask. 
+    Parameters:
+    -----------
+        - Dataset           : torch.Dataset class object (test set)
+        - prediction_folder : Folder path that contains the prediction masks files.
+        - metrics_df        : DataFrame with the metrics informations of masks (optional). default is None.
+    '''
     
     # Generate random number of image file name
     random_number = np.random.randint(1, Dataset.__len__())
     print(f'Showing observation number: {random_number}')
     
     # Get the random image and mask from torch Dataset
+    #              Image                                                           Mask
     random_image = Dataset[random_number][0]               ;        random_mask = Dataset[random_number][1] ;
     random_image = random_image.to('cpu').permute(1,2,0)   ;        random_mask = random_mask.to('cpu')     ;
 
     # Get the prediction mask metrics values
     if metrics_df is not None:
-        meanIoU = metrics_df[metrics_df['Image'] == random_number]['Mean IoU'].values
+        meanIoU  = metrics_df[metrics_df['Image'] == random_number]['Mean IoU'].values
         accuracy = metrics_df[metrics_df['Image'] == random_number]['Pixel Accuracy'].values
 
-     else:
+    else:
         pass
 
         # Get the prediction mask 
