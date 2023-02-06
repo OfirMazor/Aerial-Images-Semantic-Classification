@@ -3,6 +3,8 @@ import torch
 import time
 from tqdm.notebook import tqdm
 from utilies import pixel_accuracy, meanIoU
+from Configs import Configs
+
 
 
 
@@ -31,6 +33,8 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
     #configurations
     model.to(device)
     fit_time = time.time()
+    
+    
     print('Training started \n \n') 
     
     #Training loop
