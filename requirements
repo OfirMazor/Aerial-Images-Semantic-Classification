@@ -8,4 +8,4 @@ albumentations
 matplotlib
 torch
 torchvision
-segmentation_models_pytorch as smp
+segmentation_models_pytorch
