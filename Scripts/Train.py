@@ -2,7 +2,7 @@ import numpy
 import torch
 import time
 from tqdm.notebook import tqdm
-from Utils import pixel_accuracy, meanIoU
+from Metrics import pixel_accuracy, meanIoU
 from Configuration import Configs
 
 
