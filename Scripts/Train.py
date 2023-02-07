@@ -1,6 +1,7 @@
 import numpy
 import torch
 import time
+import numpy as np
 from tqdm.notebook import tqdm
 from Metrics import pixel_accuracy, meanIoU
 from Configuration import Configs
