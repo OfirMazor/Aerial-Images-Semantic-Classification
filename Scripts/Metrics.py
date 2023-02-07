@@ -4,7 +4,7 @@ import torch
 import torch.nn.functional as F
 from tqdm.notebook import tqdm
 import matplotlib.pyplot as plt
-from Configs import Configs
+from Configuration import Configs
 
 
 
