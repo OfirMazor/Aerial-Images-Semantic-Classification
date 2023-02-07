@@ -24,7 +24,7 @@ def train_augmentor():
                                                           contrast_limit   = (0,0.5)),
                                A.GaussNoise()
                               ])
- return train_augmentor
+  return train_augmentor
 
 
 
@@ -46,7 +46,7 @@ def valid_augmentor():
 
                                A.GridDistortion(p = 0.2)
                               ])
-return valid_augmentor
+  return valid_augmentor
 
 
 
@@ -63,7 +63,7 @@ def test_augmentor():
                                        width         = Configs.resize_width,
                                        interpolation = cv2.INTER_NEAREST)
                              ])
-return test_augmentor
+  return test_augmentor
 
 
 
@@ -81,5 +81,5 @@ def normalizer_transform():
                                    T.Normalize(Configs.normalize_mean,
                                                Configs.normalize_std)
                                    ])
-return normalizer_transform
+  return normalizer_transform
 
