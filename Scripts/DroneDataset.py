@@ -53,6 +53,5 @@ class DroneDataset(Dataset):
         mask = torch.from_numpy(mask).long()
         
         
-        
     return image, mask
 
