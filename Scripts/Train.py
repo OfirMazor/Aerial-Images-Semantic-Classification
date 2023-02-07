@@ -2,7 +2,7 @@ import numpy
 import torch
 import time
 from tqdm.notebook import tqdm
-from utilies import pixel_accuracy, meanIoU
+from Utils import pixel_accuracy, meanIoU
 from Configuration import Configs
 
 
@@ -10,7 +10,7 @@ from Configuration import Configs
 
 def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimizer, scheduler, patch:bool = False):
     '''
-    Defines a training loop.
+    Setting a training loop.
     Returns dictionary with results.
     '''
     
@@ -154,6 +154,3 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
     print('\n \n Training finished! \n Total time: {:.2f} minutes'.format((time.time() - fit_time) / 60))
     
     return history
-
-
-    
