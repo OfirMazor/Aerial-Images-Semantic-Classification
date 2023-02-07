@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
-from Configs import Configs
+from Configuration import Configs
 
 
 
