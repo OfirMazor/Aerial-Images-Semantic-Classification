@@ -1,11 +1,14 @@
 import albumentations as A
 from torchvision import transforms as T
 import cv2
-from Configs import Configs
+from Configuration import Configs
 
 
 
 def train_augmentor():
+  '''
+  A composition of image auguments for training dataset.
+  '''
   train_augmentor = A.Compose([  
                                A.Resize(height        = Configs.resize_height,
                                         width         = Configs.resize_width,
@@ -31,6 +34,9 @@ def train_augmentor():
 
 
 def valid_augmentor():
+  '''
+  A composition of image auguments for validation dataset.
+  '''
   valid_augmentor = A.Compose([
                                A.Resize(height        = Configs.resize_height,
                                         width         = Configs.resize_width,
@@ -49,6 +55,9 @@ return valid_augmentor
 
 
 def test_augmentor():
+  '''
+  A composition of image auguments for testing dataset.
+  '''
   test_augmentor = A.Compose([ 
                               A.Resize(height        = Configs.resize_height,
                                        width         = Configs.resize_width,
@@ -63,6 +72,9 @@ return test_augmentor
 
 
 def normalizer_transform():
+  '''
+  A transformations to normalize image pixels values .
+  '''
   normalizer_transform = T.Compose([
                                    T.ToTensor(),
 
