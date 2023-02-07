@@ -1,10 +1,12 @@
 import cv2
 from PIL import Image
 import torch
-
+from torch.utils.data import Dataset
 
 class DroneDataset(Dataset):
-
+    '''
+    Class for initializing images and masks as torch dataset. Can be used for traind and test dataset.
+    '''
     def __init__(self, image_path : str,
                        mask_path  : str,
                        data,
@@ -19,8 +21,7 @@ class DroneDataset(Dataset):
         - normalizer : A composision of transforms.
         '''
         
-        self.image_path = image_path    ;    self.mask_path  = mask_path   ;    self.data = data   ;
-        self.augmentor  = augmentor     ;    self.normalizer = normalizer  ;
+        self.image_path = image_path  ;  self.mask_path  = mask_path  ;  self.data = data  ;  self.augmentor  = augmentor  ;  self.normalizer = normalizer  ;
         
     
     def __len__(self):
@@ -53,5 +54,4 @@ class DroneDataset(Dataset):
         mask = torch.from_numpy(mask).long()
         
         
-    return image, mask
-
+        return image, mask
