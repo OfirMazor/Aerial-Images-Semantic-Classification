@@ -3,7 +3,7 @@ import torch
 import time
 from tqdm.notebook import tqdm
 from utilies import pixel_accuracy, meanIoU
-from Configs import Configs
+from Configuration import Configs
 
 
 
