@@ -57,23 +57,21 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             mask  = mask_tiles.to(device)
             
             #forward
-            print('training:loss block')
             output = model(image)
+            print('output size:', output.size)
+            print('mask size:', mask.size)
             loss   = criterion(output, mask)
             
             #evaluation metrics
-            print('training:metrics block')
             IoU_score += meanIoU(output, mask)
             accuracy  += pixel_accuracy(output, mask)
             
             #backward
-            print('training:backward block')
             loss.backward()
             optimizer.step()      #update weight          
             optimizer.zero_grad() #reset gradient
             
             #step the learning rate
-            print('training:LR block')
             learn_rates.append(get_lr(optimizer))
             scheduler.step()
             
