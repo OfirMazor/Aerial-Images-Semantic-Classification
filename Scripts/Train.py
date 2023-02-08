@@ -47,6 +47,7 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
         model.train()
 
         for i, data in enumerate(tqdm(train_loader)):
+            print('training')
             image_tiles, mask_tiles = data
             if patch:
                 bs, n_tiles, c, h, w = image_tiles.size()
@@ -76,7 +77,9 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             running_loss += loss.item()
             
         else:
+            
             #Validation
+            print('validation')
             model.eval()
             valid_loss      = 0
             valid_accuracy  = 0
