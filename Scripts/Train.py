@@ -101,8 +101,7 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
                     #evaluation metrics
                     valid_IoU_score += meanIoU(output, mask)
                     valid_accuracy  += pixel_accuracy(output, mask)
-                    #
-                    loss
+                    #loss
                     loss = criterion(output, mask)                                  
                     valid_loss += loss.item()
             
