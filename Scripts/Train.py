@@ -47,7 +47,6 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
         model.train()
 
         for i, data in enumerate(tqdm(train_loader)):
-            print('training')
             image_tiles, mask_tiles = data
             if patch:
                 bs, n_tiles, c, h, w = image_tiles.size()
@@ -58,19 +57,23 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             mask  = mask_tiles.to(device)
             
             #forward
+            print('training:loss block')
             output = model(image)
             loss   = criterion(output, mask)
             
             #evaluation metrics
+            print('training:metrics block')
             IoU_score += meanIoU(output, mask)
             accuracy  += pixel_accuracy(output, mask)
             
             #backward
+            print('training:backward block')
             loss.backward()
             optimizer.step()      #update weight          
             optimizer.zero_grad() #reset gradient
             
             #step the learning rate
+            print('training:LR block')
             learn_rates.append(get_lr(optimizer))
             scheduler.step()
             
