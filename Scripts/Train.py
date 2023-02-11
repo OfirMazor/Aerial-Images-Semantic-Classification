@@ -58,8 +58,9 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             
             #forward
             output = model(image)
-            print('output size:', output.size())
+            print('image size:', mask.size())
             print('mask size:', mask.size())
+            print('output size:', output.size())
             loss   = criterion(output, mask)
             
             #evaluation metrics
