@@ -21,9 +21,7 @@ def pixel_accuracy(output, mask):
 
 
 
-def meanIoU(pred_mask, mask,
-            num_classes:int = Configs.num_classes,
-            smooth:bool     = False):
+def meanIoU(pred_mask, mask, num_classes:int = Configs.num_classes, smooth:bool = False):
     
     '''
     Calculates the mean overlap area between the predicted and ground truth segmentation maps
