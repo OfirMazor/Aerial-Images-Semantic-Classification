@@ -6,6 +6,6 @@ Pillow
 opencv-python
 albumentations
 matplotlib
-torch=1.7.0
+torch == 1.7.0
 torchvision
 segmentation_models_pytorch
