@@ -31,7 +31,6 @@ class DroneDataset(Dataset):
     def __getitem__(self, idx):
         image = cv2.imread(self.image_path + self.data[idx] + '.jpg')
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        
         mask  = cv2.imread(self.mask_path + self.data[idx] + '.png', cv2.IMREAD_GRAYSCALE)
         
         
@@ -39,6 +38,7 @@ class DroneDataset(Dataset):
             aug   = self.augmentor(image = image, mask = mask)    
             image = Image.fromarray(aug['image'])
             mask  = aug['mask']
+            
         elif self.augmentor is None:
             image = Image.fromarray(image)
             mask  = mask
