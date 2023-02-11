@@ -62,6 +62,7 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             print('mask size:', mask.size())
             print('output size:', output.size())
             loss   = criterion(output, mask)
+            print(loss)
             
             #evaluation metrics
             IoU_score += meanIoU(output, mask, Configs.num_classes, smooth = False)
