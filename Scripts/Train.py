@@ -63,7 +63,7 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             loss   = criterion(output, mask)
             
             #evaluation metrics
-            IoU_score += meanIoU(output, mask)
+            IoU_score += meanIoU(output, mask, Configs.num_classes, smooth = False)
             accuracy  += pixel_accuracy(output, mask)
             
             #backward
