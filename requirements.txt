@@ -2,10 +2,10 @@
 
 tqdm
 pandas
-Pillow
-opencv-python
+Pillow == 7.2.0
+opencv-python == 4.5.1
 albumentations
 matplotlib
 torch == 1.7.0
-torchvision
-segmentation_models_pytorch
+torchvision == 0.8.1
+segmentation_models_pytorch == 0.3.2
