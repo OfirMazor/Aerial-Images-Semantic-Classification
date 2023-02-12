@@ -50,7 +50,7 @@ class Configs:
         
     ### Training ###
     epochs           = 10
-    criterion        = nn.CrossEntropyLoss()
+    criterion        = nn.CrossEntropyLoss().to(device)
     max_lr           = 1e-3
     weight_decay     = 1e-4
     steps_per_epoch  = int((train_val_count - val_size_count) / batch_size)
