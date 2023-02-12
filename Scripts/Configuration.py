@@ -10,7 +10,7 @@ class Configs:
     
     ### General ###
     main_folder      = r'/content/Aerial-Images-Semantic-Classification/'
-    num_classes      = pd.read_csv(r'/content/drive/MyDrive/Datasets/Drones Images/data/class_dict.csv')['name'].nunique() - 1 #subtruct the "unlabeled" class
+    num_classes      = 225#pd.read_csv(r'/content/drive/MyDrive/Datasets/Drones Images/data/class_dict.csv')['name'].nunique() - 1 #subtruct the "unlabeled" class
                                     #main_folder + 'Data/class_dict.csv'
     images_path      = r'/content/drive/MyDrive/Datasets/Drones Images/data/RGB Images/'                 #main_folder + 'Data/RGB Images/'
     masks_path       = r'/content/drive/MyDrive/Datasets/Drones Images/data/Label Images/label_images/'  #main_folder + 'Data/Label Images/'
