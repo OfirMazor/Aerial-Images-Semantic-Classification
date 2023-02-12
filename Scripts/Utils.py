@@ -40,14 +40,14 @@ def train_test_valid_split(array, test_size:float = 0.25, valid_size:float = 0.2
     '''
 
     train_valid, test = train_test_split(array,
-                                       test_size    = test_size,
-                                       random_state = random_state,
-                                       shuffle      = shuffle)
+                                         test_size    = test_size,
+                                         random_state = random_state,
+                                         shuffle      = shuffle)
   
-     train, valid      = train_test_split(train_valid,
-                                       test_size    = valid_size,
-                                       random_state = random_state,
-                                       shuffle      = shuffle)
+    train, valid      = train_test_split(train_valid,
+                                         test_size    = valid_size,
+                                         random_state = random_state,
+                                         shuffle      = shuffle)
   
     return train, valid, test
 
