@@ -33,23 +33,23 @@ def create_df(path:str):
 
 
 
-def train_test_valid_split(arrays, test_size:float = 0.25, valid_size:float = 0.25, random_state:int = 42, shuffle:bool = True):
+def train_test_valid_split(array, test_size:float = 0.25, valid_size:float = 0.25, random_state:int = 42, shuffle:bool = True):
     '''
-    Split arrays or matrices into random train test and valid subsets with sklearn's train_test_split.
+    Split arrays or matrices into random train, test and valid subsets using scikit-learn's train_test_split.
     https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
     '''
 
-  train_valid, test = train_test_split(arrays,
+    train_valid, test = train_test_split(array,
                                        test_size    = test_size,
                                        random_state = random_state,
                                        shuffle      = shuffle)
   
-  train, valid      = train_test_split(train_valid,
+     train, valid      = train_test_split(train_valid,
                                        test_size    = valid_size,
                                        random_state = random_state,
                                        shuffle      = shuffle)
   
-  return train, valid, test
+    return train, valid, test
 
 
 
