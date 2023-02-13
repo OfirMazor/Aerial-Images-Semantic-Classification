@@ -10,10 +10,11 @@ class Configs:
     
     ### General ###
     main_folder      = r'/content/Aerial-Images-Semantic-Classification/'
-    num_classes      = pd.read_csv(r'/content/drive/MyDrive/Datasets/Drones Images/data/class_dict.csv')['name'].nunique() #subtruct the "unlabeled" class
-                                    #main_folder + 'Data/class_dict.csv'
-    images_path      = r'/content/drive/MyDrive/Datasets/Drones Images/data/RGB Images/'                 #main_folder + 'Data/RGB Images/'
-    masks_path       = r'/content/drive/MyDrive/Datasets/Drones Images/data/Label Images/'  #main_folder + 'Data/Label Images/'
+    data_folder      = r'/content/drive/MyDrive/Datasets/Drones Images/data/'
+    num_classes      = pd.read_csv(data_folder + 'class_dict.csv')['name'].nunique()
+    images_path      = data_folder + 'RGB Images/'
+    masks_path       = data_folder +'Label Masks/'
+    Labels_path      = data_folder +'Label Images/'
     images_count     = len(os.listdir(images_path))
     masks_count      = len(os.listdir(masks_path))
     num_bands        = 3 #RGB images
