@@ -10,8 +10,8 @@
 
 
 
-Introduction
-------------
+## Introduction
+----------------
 Semantic Classification of Aerial Images from Drone using Unet
 
 
@@ -19,8 +19,8 @@ Semantic Classification of Aerial Images from Drone using Unet
 
 
 
-Data
-----
+## Data
+--------
 [Dataset page](https://www.tugraz.at/institute/icg/research/team-fraundorfer/software-media/dronedataset)
 
 
@@ -28,10 +28,11 @@ Data
 
 
 
-Getting started
----------------
+## Getting started
+-------------------
+*Steps are executed in [Colab notebook]("https://colab.research.google.com/drive/1Ulv57Z-VsE_G5drH7aj473uRGyBFWCuk?usp=sharing)
 
-1) Clone the repository : git clone https://github.com/OfirMazor/Aerial-Images-Semantic-Classification.git .
+1) Clone the repository .
 
 2) Install requirements describes in [requirements.txt](https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/requirements.txt).
 
