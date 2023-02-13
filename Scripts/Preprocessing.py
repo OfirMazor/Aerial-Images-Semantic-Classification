@@ -43,30 +43,3 @@ def map_to_mask(input_rgb, out_mask_path, mapping_dict:dict):
   out_mask_name = input_rgb.split('/')[-1]
   out_mask = out_mask_path + f'/{out_mask_name}'
   cv2.imwrite(out_mask, single_channel_mask)
-
-
-
-
-# Preprocessing
-class_csv      = Configs.data_folder + 'class_dict.csv'
-input_rgb_path = Configs.masks_path
-out_mask_path  = Configs.labels_path
-class_df = pd.read_csv(class_csv)
-
-mapping_dict = df_to_RGB_dictionary(df = class_df, RGB_columns = [' r', ' g', ' b'])
-
-images_files = []
-
-
-for root, dirs, files in os.walk(input_rgb_path):
-  for file in files:
-    if file.endswith('.png'):
-      images_files.append(file)
-
-
-for file in images_files:
-  print('Mapping image to mask for', file)
-  map_to_mask(input_rgb     = input_rgb_path + file,
-              out_mask_path = out_mask_path,
-              mapping_dict  = mapping_dict)
-  
