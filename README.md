@@ -19,7 +19,7 @@ more details are in [Dataset page](https://www.tugraz.at/institute/icg/research/
 Sample of the dataset images can be found in the [Data](https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Data/) folder.
 
 
-<!-- | Name        | R   | G   | B   | Color                                                                                           |
+| Name        | R   | G   | B   | Color                                                                                           |
 | ----------- | --- | --- | --- | ----------------------------------------------------------------------------------------------- |
 | unlabeled   | 0   | 0   | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(0,0,0)" /></svg>       |
 | paved-area  | 128 | 64  | 128 | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(128,64,128)" /></svg>  |
@@ -44,7 +44,7 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 | bald-tree   | 190 | 250 | 190 | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(190,250,190)" /></svg> |
 | ar-marker   | 112 | 150 | 146 | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(112,150,146)" /></svg> |
 | obstacle    | 2   | 135 | 115 | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(2,135,115)" /></svg>   |
-| conflicting | 255 | 0   | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(255,0,0)" /></svg>     | -->
+| conflicting | 255 | 0   | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(255,0,0)" /></svg>     |
 
 
 
