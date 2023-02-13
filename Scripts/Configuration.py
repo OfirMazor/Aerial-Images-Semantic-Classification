@@ -14,7 +14,7 @@ class Configs:
     num_classes      = pd.read_csv(data_folder + 'class_dict.csv')['name'].nunique()
     images_path      = data_folder + 'RGB Images/'
     masks_path       = data_folder +'Label Masks/'
-    Labels_path      = data_folder +'Label Images/'
+    labels_path      = data_folder +'Label Images/'
     images_count     = len(os.listdir(images_path))
     masks_count      = len(os.listdir(masks_path))
     num_bands        = 3 #RGB images
