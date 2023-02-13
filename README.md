@@ -9,7 +9,7 @@
 
 
 ## Introduction
-This repo is a personal practice for semantic classification of imagesusing Unet.
+This repo is a personal practice for semantic classification of images using Unet.
 
 
 ## Data
@@ -29,3 +29,6 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 
 3) Use the Preprocessing.py script to convert RGB masks to single channel mask image.
    * This step is not requierd if you already own a converted version of masks. Once converted all rgb masks - the step is no longer require.
+
+4) All variables and configurations are set and defined Configurations.py. 
+   Tuining of parameters can be changes directly in the Configuration script for better control and automation.
