@@ -63,7 +63,7 @@ def plot_random_image(images_df:pd.DataFrame, masks_df:pd.DataFrame):
     random_image = Image.open(Configs.images_path + image_id_str + '.jpg')
 
     mask_id_str = masks_df[masks_df['id_int'] == random_id]['id_str'].item()
-    random_mask = Image.open(Configs.masks_path + mask_id_str + '.png')
+    random_mask = Image.open(Configs.labels_path + mask_id_str + '.png')
 
     
     plt.figure()
