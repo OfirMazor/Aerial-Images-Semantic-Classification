@@ -28,7 +28,7 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 2) Install requirements describes in [requirements.txt](https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/requirements.txt).
 
 3) Use the Preprocessing.py script to convert RGB masks to single channel mask image.
-   * This step is not requierd if you already own a converted version of masks. Once converted all rgb masks - the step is no longer require.
+   * This step is not requierd if you already own a converted version of masks. Once converted all RGB masks - the step is no longer require.
 
-4) All variables and configurations are set and defined Configurations.py. 
-   Tuining of parameters can be changes directly in the Configuration script for better control and automation.
+4) All variables and parameters are set and defined in Configurations.py. 
+   Tuning training and models parameters can be change directly in the Configuration script for custom configurations.
