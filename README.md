@@ -21,7 +21,7 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 
 | Name        | R   | G   | B   | Color                                                                                           |
 | ----------- | --- | --- | --- | ----------------------------------------------------------------------------------------------- |
-| unlabeled   | 0   | 0   | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(0,0,0)" /></svg>       |
+| unlabeled   | 0   | 0   | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(128,64,128)" /></svg>  |
 | paved-area  | 128 | 64  | 128 | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(128,64,128)" /></svg>  |
 | dirt        | 130 | 76  | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(130,76,0)" /></svg>    |
 | grass       | 0   | 102 | 0   | <svg width="30" height="20"><rect width="30" height="20" style="fill:rgb(0,102,0)" /></svg>     |
