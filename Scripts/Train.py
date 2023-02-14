@@ -74,14 +74,15 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             accuracy  += pixel_accuracy(output, mask)
             
             #backward
+            print('Backward Block')
             loss.backward()
             optimizer.step()      #update weight          
             optimizer.zero_grad() #reset gradient
             
             #step the learning rate
+            print('LR Block')
             learn_rates.append(get_lr(optimizer))
             scheduler.step()
-            
             running_loss += loss.item()
             
         else:
