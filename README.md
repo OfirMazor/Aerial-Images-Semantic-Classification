@@ -39,8 +39,8 @@ Tuning models parameters and files paths can be change directly in the Configura
 
 ## Results example
 
-["1"]("https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example1.png")
+!["1"]("https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example1.png")
 
-["2"]("https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example2.png")
+!["2"]("https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example2.png")
 
-["3"]("https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example3.png")
+!["3"]("https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example3.png")
