@@ -118,12 +118,6 @@ def plot_history(history:dict):
 
 
 
-def get_lr(optimizer):
-  for group in optimizer.param_groups: 
-    return group['lr']
-
-
-
 def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataFrame = None):
     random_number = np.random.randint(1, Dataset.__len__())
     '''
