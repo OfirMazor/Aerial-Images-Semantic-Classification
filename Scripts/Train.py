@@ -8,6 +8,14 @@ from Configuration import Configs
 
 
 
+def get_lr(optimizer):
+    '''
+    Return the learning rate value of optimizer
+    '''
+  for group in optimizer.param_groups: 
+    return group['lr']
+
+
 
 def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimizer, scheduler, patch:bool = False):
     '''
@@ -58,13 +66,6 @@ def fit(epochs:int, model, device, train_loader, val_loader, criterion, optimize
             
             #forward
             output = model(image)
-            print('image size in forward:', image.size())
-            print('')
-            print('mask size:', mask.size())
-            print(mask)
-            print('')
-            print('output size:', output.size())
-            print(output)
             loss   = criterion(output, mask)
             print(loss)
             
