@@ -134,10 +134,13 @@ def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataF
     print(f'Showing observation number: {random_number}')
     
     # Get the random image and mask from torch Dataset
+    #
     #              Image                                                           Mask
+    #            --------                                                        --------
     random_image = Dataset[random_number][0]               ;        random_mask = Dataset[random_number][1] ;
     random_image = random_image.to('cpu').permute(1,2,0)   ;        random_mask = random_mask.to('cpu')     ;
 
+    
     # Get the prediction mask metrics values
     if metrics_df is not None:
         meanIoU  = metrics_df[metrics_df['Image'] == random_number]['Mean IoU'].values
@@ -146,10 +149,12 @@ def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataF
     else:
         pass
 
-        # Get the prediction mask 
+    
+    # Get the prediction mask 
     pred_mask = Image.open(f'{prediction_folder}{random_number}.png')
 
-      # Figure settings
+    
+    # Figure settings
     plt.figure()
     fig, axarr = plt.subplots(nrows=1, ncols=3, sharey=True, figsize=(25, 25))
 
@@ -161,7 +166,7 @@ def plot_random_prediction(Dataset, prediction_folder:str, metrics_df : pd.DataF
 
     axarr[2].imshow(pred_mask)
     if metrics_df is not None:
-        axarr[2].set_title(f'Predicted mask image {np.asarray(random_mask).shape} \n with pixel accuracy:{Accuracy} & mean IoU: {meanIoU}')
+        axarr[2].set_title(f'Predicted mask image {np.asarray(random_mask).shape} \n with pixel accuracy:{accuracy} & mean IoU: {meanIoU}')
     else:
         axarr[2].set_title(f'Predicted mask image {np.asarray(random_mask).shape}')
 
