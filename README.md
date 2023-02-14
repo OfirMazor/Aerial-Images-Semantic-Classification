@@ -34,4 +34,4 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 
 ## Customization
 All variables and parameters are set and defined in Configurations.py. 
-Tuning training and models parameters can be change directly in the Configuration script for personal configurations.
+Tuning models parameters and files paths can be change directly in the Configuration script for personal configurations.
