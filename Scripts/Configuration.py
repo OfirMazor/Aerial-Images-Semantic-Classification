@@ -20,7 +20,7 @@ class Configs:
     num_bands        = 3 #RGB images
     device           = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed             = 100
-    prediction_folder= main_folder + 'PredictedMasks/'  
+    prediction_folder= main_folder + 'Predicted Masks/'  
     
     ### Data manegement ###
     test_size        = 0.1
@@ -36,7 +36,7 @@ class Configs:
     normalize_std    = (0.229, 0.224, 0.225)
     
     ### Model ###
-    model_folder     = main_folder + 'ModelFolder/'
+    model_folder     = main_folder + 'Saved Models/'
     encoder_name     = 'mobilenet_v2'
     encoder_weights  = 'imagenet'
     decoder_channels = [256, 128, 64, 32, 16]
