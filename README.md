@@ -35,3 +35,17 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 ## Customization
 All variables and parameters are set and defined in Configurations.py. 
 Tuning models parameters and files paths can be change directly in the Configuration script for personal configurations.
+
+
+## Results example
+# Aerial-Images-Semantic-Classification
+
+<p>
+    <img src="https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example1.png"/>
+    
+    <img src="https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example2.png"/>
+    
+    <img src="https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/Predicted Masks/example3.png"/>
+  </a>
+</p>
+
