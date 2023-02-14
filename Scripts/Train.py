@@ -12,8 +12,9 @@ def get_lr(optimizer):
     '''
     Return the learning rate value of optimizer
     '''
-  for group in optimizer.param_groups: 
-    return group['lr']
+    
+    for group in optimizer.param_groups: 
+        return group['lr']
 
 
 
