@@ -21,20 +21,23 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 
 
 ## Getting started
-*Steps are executed in [Colab notebook](https://colab.research.google.com/drive/1Ulv57Z-VsE_G5drH7aj473uRGyBFWCuk?usp=sharing)
 
 1) Clone the repository.
 
 2) Install requirements describes in [requirements.txt](https://github.com/OfirMazor/Aerial-Images-Semantic-Classification/blob/main/requirements.txt).
 
 3) Use the Preprocessing.py script to convert RGB masks to single channel mask image.
-   * This step is time consuming and it is not requierd if you already own a converted version of masks. Once converted all RGB masks - the step is no longer require.
+   * This step is time consuming and it is not requierd if you already own a converted version of masks. Once converted all RGB masks - the step is no longer required.
 
+*Steps are executed in [Colab notebook](https://colab.research.google.com/drive/1Ulv57Z-VsE_G5drH7aj473uRGyBFWCuk?usp=sharing)
 
 
 ## Customization
+
 All variables and parameters are set and defined in Configurations.py. 
 Tuning models parameters and files paths can be change directly in the Configuration script for personal configurations.
+
+
 
 
 ## Results example
