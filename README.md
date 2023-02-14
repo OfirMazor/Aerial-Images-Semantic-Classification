@@ -30,5 +30,8 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 3) Use the Preprocessing.py script to convert RGB masks to single channel mask image.
    * This step is time consuming and it is not requierd if you already own a converted version of masks. Once converted all RGB masks - the step is no longer require.
 
-4) All variables and parameters are set and defined in Configurations.py. 
-   Tuning training and models parameters can be change directly in the Configuration script for custom configurations.
+
+
+## Customization
+All variables and parameters are set and defined in Configurations.py. 
+Tuning training and models parameters can be change directly in the Configuration script for personal configurations.
