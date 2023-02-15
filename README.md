@@ -22,7 +22,7 @@ Sample of the dataset images can be found in the [Data](https://github.com/OfirM
 
 ## Getting started
 
-0) After downloading the data, make sure to set the rights folder paths in Configuration.py 
+0) After downloading the data, make sure to set your folders path in Configuration.py 
 
 1) Clone the repository.
 
