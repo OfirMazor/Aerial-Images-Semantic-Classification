@@ -10,7 +10,7 @@ from Configuration import Configs
 
 def pixel_accuracy(output, mask):
     '''
-    Calculate the ratio betweeen the sum of for pixels thats were corrected in prediction mask.
+    Calculate the ratio of how many pixels were predicted successfully from th total pixels in the mask.
     '''
     with torch.no_grad():
         output   = torch.argmax(F.softmax(output, dim = 1), dim = 1) #Get the location of pixel in predicted mask
